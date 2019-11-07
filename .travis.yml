@@ -4,6 +4,8 @@ rvm:
 # bundler_args: --jobs=3
 before_script:
   # - cp config/database.yml.travis config/database.yml
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
 
 script:
   - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test
@@ -12,5 +14,5 @@ script:
 cache: bundler
 services:
   - postgresql
-addons:
-  postgresql: "11.5"
+# addons:
+#   postgresql: "11.5"
