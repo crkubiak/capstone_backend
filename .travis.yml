@@ -3,7 +3,7 @@ rvm:
   - 2.6.3
 # bundler_args: --jobs=3
 before_script:
-  - cp config/database.yml.travis config/database.yml
+  # - cp config/database.yml.travis config/database.yml
 
 script:
   - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test
