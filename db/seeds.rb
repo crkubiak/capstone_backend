@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+r1 = Record.create(location: "Chicago", comment: "Cats Cats Cats")
+
+Image.create(image_url: "https://cdn01.vulcanpost.com/wp-uploads/2017/04/cat-games-feature-image-1.png", records_id: r1.id)
