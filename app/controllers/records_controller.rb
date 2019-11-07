@@ -1,4 +1,6 @@
 class RecordsController < ApplicationController
-    def home
+    def index 
+        @records = Record.all
+        json_response(@records)
     end
 end
