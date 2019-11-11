@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 2019_11_08_194724) do
 
   create_table "images", force: :cascade do |t|
     t.string "image_url"
-    t.bigint "records_id"
+    t.bigint "record_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["records_id"], name: "index_images_on_records_id"
+    t.index ["record_id"], name: "index_images_on_record_id"
   end
 
   create_table "records", force: :cascade do |t|
