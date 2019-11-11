@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration[6.0]
     create_table :images do |t|
       t.string :image_url
       
-      t.references :records
+      t.references :record
       
       t.timestamps
     end
