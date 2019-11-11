@@ -1,3 +1,4 @@
 class Record < ApplicationRecord
-    has_many :image
+    validates :location, :comment, presence: true
+    validates_uniqueness_of :location
 end
