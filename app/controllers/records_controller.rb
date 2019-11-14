@@ -12,6 +12,6 @@ class RecordsController < ApplicationController
     private
 
     def record_params
-        params.require(:record).permit(:location, :comment, images: [])
+        params.permit(:location, :comment, :images)
     end
 end
